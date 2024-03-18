@@ -11,12 +11,14 @@ FIBONACCI:
 	stw r4, 20(sp)
 	
 	movi r4, 0
-	movi	r5, 1024 /*p*/
+	movi	r5, 128 /*E*/
+	#movia	r5, 128*2 /*E*P*/
+
 	
 LOOP:
 	bge r4, r5, STOP
 	ldb r0, V(r4)
-	addi r4, r4, 1 /*x*/
+	addi r4, r4, 1 /*P*/
 	br LOOP
 	
 	
